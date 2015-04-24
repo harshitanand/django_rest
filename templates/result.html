@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>Here is our result</h1>
+        {% if movies %}
+            {% for movie in movies %}
+                <div>
+                    <li>Name of  the movie: {{ movie.name }}</li>
+                    <li>Popularity: {{ movie.popularity }}</li>
+                    <li>IMDB_Rating: {{ movie.imdb_score }}</li>
+                    <li>Director: {{ movie.director }}</li>
+                    <li>Genere: {{ movie.genere }}</li>
+                </div>
+            {% endfor %}
+        {% else %}
+            <center><strong style="color: red">Movie not fount</strong></center>
+        {% endif %}
+    </div>
+</body>
+</html>
